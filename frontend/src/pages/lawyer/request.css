@@ -1,0 +1,127 @@
+/* ===============================
+   Request Modal - Premium
+================================ */
+
+.request-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 18px;
+}
+
+.request-modal {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #eef2f7;
+  box-shadow: 0px 20px 50px rgba(15, 23, 42, 0.2);
+  overflow: hidden;
+  animation: popup 0.25s ease;
+}
+
+@keyframes popup {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.request-modal-header {
+  padding: 18px 18px 10px 18px;
+}
+
+.request-modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.request-modal-header p {
+  margin: 6px 0 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.request-modal-body {
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.request-input,
+.request-textarea {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 12px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.request-input:focus,
+.request-textarea:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0px 0px 0px 4px rgba(37, 99, 235, 0.12);
+}
+
+.request-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 18px 18px 18px;
+  border-top: 1px solid #eef2f7;
+}
+
+/* Modal Buttons */
+.btn-cancel {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f1f5f9;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-cancel:hover {
+  background: #e2e8f0;
+}
+
+.btn-send {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-send:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-send:hover:not(:disabled) {
+  transform: translateY(-1px);
+}

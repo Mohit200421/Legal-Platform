@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.applylawyer-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f7, #dfe6ee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.applylawyer-card {
+  width: 980px;
+  max-width: 100%;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 40px 42px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.applylawyer-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.applylawyer-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #22c55e;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.applylawyer-subtitle {
+  text-align: center;
+  margin: 16px 0 28px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.applylawyer-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+
+/* ✅ Form Grid */
+.applylawyer-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 16px;
+}
+
+/* ✅ Input + Textarea */
+.applylawyer-form input,
+.applylawyer-form textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  padding: 13px 14px;
+  font-size: 14px;
+  color: #0f172a;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+/* Placeholder */
+.applylawyer-form input::placeholder,
+.applylawyer-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Focus */
+.applylawyer-form input:focus,
+.applylawyer-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* textarea full width */
+.applylawyer-form textarea {
+  grid-column: 1 / -1;
+  min-height: 110px;
+  resize: none;
+}
+
+/* Submit button full width */
+.applylawyer-form button {
+  grid-column: 1 / -1;
+  width: 260px;              /* ✅ small button */
+  justify-self: center;      /* ✅ center in grid */
+  height: 48px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: 0.2s ease;
+}
+
+
+.applylawyer-form button:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* Mobile: vertical */
+@media (max-width: 850px) {
+  .applylawyer-card {
+    padding: 30px 22px;
+  }
+
+  .applylawyer-form {
+    grid-template-columns: 1fr;
+  }
+
+  .applylawyer-form textarea,
+  .applylawyer-form button {
+    grid-column: auto;
+  }
+}

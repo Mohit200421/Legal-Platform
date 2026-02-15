@@ -1,0 +1,29 @@
+.admin-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 32px;
+  color: #2563eb;
+}
+
+.stat-card p {
+  margin-top: 8px;
+  color: #64748b;
+}

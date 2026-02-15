@@ -1,0 +1,50 @@
+.add-lawyer-container {
+  padding: 30px;
+  width: 100%;
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  background: #003b95;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}

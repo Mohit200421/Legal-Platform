@@ -1,0 +1,84 @@
+.user-container {
+  display: flex;
+  height: 100vh;              /* FULL viewport */
+  background: #f4f6f9;
+  overflow: hidden;           /* prevent double scroll */
+}
+
+/* ================= SIDEBAR ================= */
+
+.user-sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: #fff;
+  padding: 20px;
+  position: fixed;            /* 🔥 FIXED SIDEBAR */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar (optional) */
+.user-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+.user-sidebar::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+/* ================= LOGO ================= */
+
+.user-sidebar .logo {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ================= NAV LINKS ================= */
+
+.user-sidebar nav a {
+  display: block;
+  padding: 12px;
+  color: #cbd5f5;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.user-sidebar nav a.active,
+.user-sidebar nav a:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ================= LOGOUT BUTTON ================= */
+
+.user-logout-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #dc2626;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.user-logout-btn:hover {
+  background: #b91c1c;
+}
+
+/* ================= CONTENT ================= */
+
+.user-content {
+  margin-left: 240px;         /* 🔥 leave space for sidebar */
+  flex: 1;
+  padding: 30px;
+  height: 100vh;
+  overflow-y: auto;           /* 🔥 ONLY CONTENT SCROLLS */
+}

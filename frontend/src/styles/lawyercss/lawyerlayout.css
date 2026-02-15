@@ -1,0 +1,84 @@
+.lawyer-container {
+  display: flex;
+  height: 100vh;
+  background: #f4f6f9;
+  overflow: hidden;
+}
+
+/* ================= SIDEBAR ================= */
+
+.lawyer-sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar (optional) */
+.lawyer-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+.lawyer-sidebar::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+/* ================= LOGO ================= */
+
+.lawyer-sidebar .logo {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ================= NAV LINKS ================= */
+
+.lawyer-sidebar nav a {
+  display: block;
+  padding: 12px;
+  color: #cbd5f5;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lawyer-sidebar nav a.active,
+.lawyer-sidebar nav a:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ================= LOGOUT BUTTON ================= */
+
+.lawyer-logout-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #ffffff;
+  border: none;
+  border-radius: 6px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.lawyer-logout-btn:hover {
+  background: #b91c1c;
+}
+
+/* ================= CONTENT ================= */
+
+.lawyer-content {
+  margin-left: 240px;
+  flex: 1;
+  padding: 30px;
+  height: 100vh;
+  overflow-y: auto;
+}

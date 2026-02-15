@@ -1,0 +1,271 @@
+/* ===============================
+   Talk To Lawyer - Premium UI
+================================ */
+
+.talk-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 22px;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ===============================
+   Header
+================================ */
+.talk-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 26px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid #eef2f7;
+  margin-bottom: 22px;
+}
+
+.talk-top h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.4px;
+}
+
+/* LKC Balance */
+.lkc-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 420px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.lkc-box span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.add-lkc-btn {
+  flex: 1;
+  max-width: 240px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0px 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+.add-lkc-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0px 10px 22px rgba(37, 99, 235, 0.35);
+}
+
+.add-lkc-btn:active {
+  transform: translateY(0px);
+}
+
+/* ===============================
+   Main Layout
+================================ */
+.talk-body {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+/* Right Content */
+.talk-right {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid #eef2f7;
+  box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* ===============================
+   Search + Sort (Professional Bar)
+================================ */
+.search-sort-row {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+/* Search Input */
+.search-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 6px 10px;
+  transition: 0.25s ease;
+}
+
+.search-box:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0px 0px 0px 4px rgba(37, 99, 235, 0.12);
+  background: #ffffff;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  color: #0f172a;
+}
+
+.search-box input::placeholder {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.search-box button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.search-box button:hover {
+  background: #eef2ff;
+}
+
+/* Sort Dropdown */
+.sort-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.sort-box label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  min-width: 80px;
+}
+
+.sort-box select {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+/* ===============================
+   Lawyer Cards Grid
+================================ */
+.lawyer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+  margin-top: 6px;
+}
+
+/* Loading + Empty */
+.talk-loading,
+.talk-empty {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+  padding: 40px 0;
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 1100px) {
+  .talk-body {
+    grid-template-columns: 270px 1fr;
+  }
+
+  .lkc-box {
+    min-width: 340px;
+  }
+}
+
+@media (max-width: 900px) {
+  .talk-body {
+    grid-template-columns: 1fr;
+  }
+
+  .talk-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .lkc-box {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .add-lkc-btn {
+    width: 100%;
+    max-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .talk-wrapper {
+    padding: 14px;
+  }
+
+  .talk-top {
+    padding: 18px;
+  }
+
+  .talk-top h2 {
+    font-size: 20px;
+  }
+
+  .talk-right {
+    padding: 14px;
+  }
+
+  .sort-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sort-box label {
+    min-width: unset;
+  }
+
+  .lawyer-grid {
+    grid-template-columns: 1fr;
+  }
+}

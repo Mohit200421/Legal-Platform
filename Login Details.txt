@@ -1,0 +1,15 @@
+User Login 
+for user yu can registered through your mail.
+
+Admin Login 
+
+"email":"badgujarmohit980@gmail.com",
+"password" : "Mohit@123"
+
+Lawyer Login 
+
+"email":"mohitbadgujar04@gmail.com",
+"password" : "Mohit@123"
+
+
+temporary password for lawyer is "lawyer@123"

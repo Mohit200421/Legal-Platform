@@ -1,0 +1,194 @@
+/* ================= PAGE ================= */
+
+.manage-lawyers h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/* ================= ADD BUTTON ================= */
+
+.add-lawyer-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #003b95;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.add-lawyer-btn:hover {
+  background: #002a73;
+}
+
+/* ================= TABLE ================= */
+
+.lawyer-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.lawyer-table th {
+  background: #f9fafb;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #374151;
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.lawyer-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #111827;
+}
+
+.lawyer-table tr:hover {
+  background: #f1f5f9;
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.pending-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.view-btn {
+  padding: 10px 16px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================= MODAL ================= */
+
+.lawyer-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 15px;
+}
+
+/* ✅ CARD MODAL WITH 4 SIDE CURVE */
+.lawyer-modal-card {
+  background: white;
+  width: 100%;
+  max-width: 750px;
+  border-radius: 18px; /* ✅ curve all 4 sides */
+  padding: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+
+  overflow: hidden; /* ✅ keeps curve while scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+.lawyer-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ================= SIMPLE DETAILS (NO BOXES) ================= */
+
+.lawyer-details-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+
+  /* ✅ scroll only inside details */
+  max-height: 55vh;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.lawyer-row {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lawyer-key {
+  min-width: 180px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.lawyer-value {
+  color: #374151;
+  word-break: break-word;
+}
+
+/* ================= MODAL ACTIONS ================= */
+
+.lawyer-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+  .lawyer-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .lawyer-key {
+    min-width: auto;
+  }
+
+  .pending-actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

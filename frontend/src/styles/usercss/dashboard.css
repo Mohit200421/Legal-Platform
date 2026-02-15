@@ -1,0 +1,197 @@
+.user-dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 18px auto;
+  padding: 0 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.ud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.ud-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.ud-subtitle {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.ud-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.ud-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ud-btn.primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.ud-btn.outline {
+  border: 1px solid #cbd5e1;
+  color: #2563eb;
+  background: white;
+}
+
+.ud-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.ud-card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.ud-card-label {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.ud-card-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.ud-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+}
+
+.ud-section {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.ud-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.ud-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.ud-quick-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.ud-quick-card span {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 6px;
+  color: #64748b;
+}
+
+.ud-quick-card:hover {
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+}
+
+.ud-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.ud-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: white;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.ud-profile-name {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.ud-profile-email {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.ud-profile-role {
+  font-size: 13px;
+  color: #475569;
+  margin-top: 4px;
+}
+
+.ud-note {
+  margin-top: 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #1e40af;
+}
+
+@media (max-width: 900px) {
+  .ud-header {
+    flex-direction: column;
+  }
+
+  .ud-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ud-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ud-quick-grid {
+    grid-template-columns: 1fr;
+  }
+}
