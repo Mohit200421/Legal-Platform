@@ -12,6 +12,10 @@ const connectDB = require("./config/db");
 const errorHandler = require("./middleware/errorHandler");
 
 const userArticleRoutes = require("./routes/userArticleRoutes");
+const discussionRoutes = require("./routes/discussionRoutes");
+const publicRoutes = require("./routes/publicRoutes");
+
+
 
 const app = express();
 
@@ -67,8 +71,20 @@ app.use("/api/ocr", require("./routes/ocrRoutes"));
 app.use("/api/master", require("./routes/masterRoutes"));
 app.use("/api/categories", require("./routes/categoryRoutes"));
 
+app.use("/api/lawyer", discussionRoutes);
+
+app.use("/api", require("./routes/publicLawyerRoutes"));
+
+
 // Chat Message APIs
 app.use("/api/messages", require("./routes/messageRoutes"));
+
+app.use("/api/payment", require("./routes/paymentRoutes"));
+
+//subscription routes
+app.use("/api/subscriptions", require("./routes/subscription.routes"));
+
+app.use("/api/public", publicRoutes);
 
 /* =========================
    ✅ ERROR LOGGER
@@ -111,6 +127,17 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     console.log("❌ Socket disconnected:", socket.id);
+  });
+});
+
+// Catch-all for unknown routes (should be before error handlers)
+// This helps debug 404 issues
+app.use((req, res) => {
+  console.log("❌ 404 - Route not found:", req.method, req.url);
+  res.status(404).json({
+    msg: "Route not found",
+    path: req.url,
+    method: req.method,
   });
 });
 
